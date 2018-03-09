@@ -1,0 +1,11 @@
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\bin\Debug\netcoreapp2.0\URLShortener.deps.json
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\bin\Debug\netcoreapp2.0\URLShortener.runtimeconfig.json
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\bin\Debug\netcoreapp2.0\URLShortener.runtimeconfig.dev.json
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\bin\Debug\netcoreapp2.0\URLShortener.dll
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\bin\Debug\netcoreapp2.0\URLShortener.pdb
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\obj\Debug\netcoreapp2.0\URLShortener.csprojResolveAssemblyReference.cache
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\obj\Debug\netcoreapp2.0\URLShortener.csproj.CoreCompileInputs.cache
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\obj\Debug\netcoreapp2.0\URLShortener.AssemblyInfoInputs.cache
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\obj\Debug\netcoreapp2.0\URLShortener.AssemblyInfo.cs
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\obj\Debug\netcoreapp2.0\URLShortener.dll
+C:\Users\tomja\Documents\Visual Studio 2017\Projects\URLShortener\URLShortener\obj\Debug\netcoreapp2.0\URLShortener.pdb
