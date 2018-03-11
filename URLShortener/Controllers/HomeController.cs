@@ -5,29 +5,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using URLShortener.Models;
+using URLShortener.Repository;
 
 namespace URLShortener.Controllers
 {
     public class HomeController : Controller
     {
+        private IURLRepository _URLRepo;
+
+        public HomeController(IURLRepository URLRepo)
+        {
+            _URLRepo = URLRepo;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var URLList = _URLRepo.GetAdresses();
+            return View(URLList);
         }
-
-        public IActionResult About()
+        public IActionResult Create(URL url)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            _URLRepo.AddAddress(url);
+            return RedirectToAction("Index");
         }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
+    
+        
 
         public IActionResult Error()
         {

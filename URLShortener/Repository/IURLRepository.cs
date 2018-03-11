@@ -9,5 +9,6 @@ namespace URLShortener.Repository
     public interface IURLRepository
     {
         IEnumerable<URL> GetAdresses();
+        void AddAddress(URL url);
     }
 }
