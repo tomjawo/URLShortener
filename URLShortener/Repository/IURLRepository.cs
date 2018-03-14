@@ -10,5 +10,7 @@ namespace URLShortener.Repository
     {
         IEnumerable<URL> GetAdresses();
         void AddAddress(URL url);
+        void DeleteAddress(URL url);
+        URL GetAddress(string shortAddress);
     }
 }

@@ -28,6 +28,17 @@ namespace URLShortener.Repository
             URLList.Add(url);
         }
 
+        public void DeleteAddress(URL url)
+        {
+            var address = URLList.Where(o=>o.Id  == url.Id).FirstOrDefault();
+            URLList.Remove(address);
+        }
+
+        public URL GetAddress(string shortAddress)
+        {
+            return URLList.Where(u => u.ShortAdress == shortAddress).FirstOrDefault();
+        }
+
 
     }
 }

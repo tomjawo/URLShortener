@@ -24,6 +24,7 @@ namespace URLShortener
         {
             services.AddMvc();
             services.AddSingleton<IURLRepository, URLRepository>();
+            
 
         }
 
@@ -41,13 +42,16 @@ namespace URLShortener
             }
 
             app.UseStaticFiles();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{shortAddress?}");
+                    
+               
             });
+           
         }
     }
 }

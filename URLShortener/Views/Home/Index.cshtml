@@ -19,7 +19,9 @@
             <td><strong>@Html.DisplayNameFor(model => item.Address):</strong></td>
             <td>@Html.DisplayFor(model => item.Address),</td>
             <td><strong>@Html.DisplayNameFor(model => item.ShortAdress):</strong></td>
-            <td>@Html.DisplayFor(model => item.ShortAdress)</td>
+            @*<td>@Html.DisplayFor(model => item.ShortAdress)</td>*@
+            <td>@Html.ActionLink(item.ShortAdress,"Index","Redirection",new {shortAddress =item.ShortAdress},new {target = "_blank" })</td>
+            <td>@Html.ActionLink("Delete","Delete","Home",item)</td>
         </tr>
 
 
