@@ -26,8 +26,16 @@ namespace URLShortener.Controllers
 
         public IActionResult Create(URL url)
         {
-            _URLRepo.AddAddress(url);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _URLRepo.AddAddress(url);
+                return RedirectToAction("Index");
+            }
+
+            var URLList = _URLRepo.GetAdresses();
+
+            return View("Index", URLList);
+
         }
 
         public IActionResult Delete(URL url)

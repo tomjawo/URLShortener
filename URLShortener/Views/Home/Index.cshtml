@@ -7,8 +7,10 @@
 <div>
     @using (Html.BeginForm("Create", "Home", FormMethod.Post))
     {
-        <input type="text" name="Address" placeholder="Address" /> <br/>
+        @Html.TextBox("Address", null, new { placeholder = "Address" })
         <button type="submit">Add</button>
+        <br />
+        @Html.ValidationMessage("Address", null, new{@class= "text-danger"});
     }
 </div>
 <div>
