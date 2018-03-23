@@ -39,6 +39,11 @@ namespace URLShortener.Repository
             return URLList.Where(u => u.ShortAdress == shortAddress).FirstOrDefault();
         }
 
+        public void UpdateAddress(URL url)
+        {
+            var indexToBeUpdated = URLList.FindIndex(u => u.Id == url.Id);
+            URLList[indexToBeUpdated] = url;
+        }
 
-    }
+}
 }

@@ -1,0 +1,12 @@
+﻿  @model URLShortener.Models.URL
+
+ <div>
+        @using (Html.BeginForm("Update", "Home", FormMethod.Post))
+        {
+            @Html.TextBoxFor(model => model.Address)
+            @Html.HiddenFor(model => model.ShortAdress)
+            @Html.HiddenFor(model => model.Id)
+            <button type="submit">Update</button>
+        }
+
+</div>

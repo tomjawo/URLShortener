@@ -30,13 +30,30 @@ namespace URLShortener.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete (URL url)
+        public IActionResult Delete(URL url)
         {
             _URLRepo.DeleteAddress(url);
             return RedirectToAction("Index");
         }
-    
+
+        [HttpGet]
+        public IActionResult Edit(URL url)
+        {
+
+            return View(url);
+        }
+
         
+
+        [HttpPost]
+        public IActionResult Update(URL url)
+        {
+          
+          _URLRepo.UpdateAddress(url);
+          return Redirect("Index");
+        }
+
+
 
         public IActionResult Error()
         {

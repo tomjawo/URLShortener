@@ -12,5 +12,6 @@ namespace URLShortener.Repository
         void AddAddress(URL url);
         void DeleteAddress(URL url);
         URL GetAddress(string shortAddress);
+        void UpdateAddress(URL url);
     }
 }
