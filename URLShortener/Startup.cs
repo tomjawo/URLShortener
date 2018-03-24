@@ -24,7 +24,7 @@ namespace URLShortener
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IURLRepository, URLRepository>();
+            services.AddTransient<IURLRepository, URLSQLiteRepository>();
             services.AddDbContext<URLDbContext>(options =>options.UseSqlite(Configuration.GetConnectionString("URLDbConnection")));
 
         }
