@@ -40,6 +40,12 @@ namespace URLShortener.Repository
             return _context.URLs.ToList();
         }
 
+        public IEnumerable<URL> GetAdresses(int page, int itemsPerPage)
+        {
+            int elementsToSkip = page * itemsPerPage;
+            return _context.URLs.Skip(elementsToSkip).Take(itemsPerPage);
+        }
+
         public void UpdateAddress(URL url)
         {
             _context.URLs.Attach(url);

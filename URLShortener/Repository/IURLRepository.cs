@@ -13,5 +13,6 @@ namespace URLShortener.Repository
         void DeleteAddress(URL url);
         URL GetAddress(string shortAddress);
         void UpdateAddress(URL url);
+        IEnumerable<URL> GetAdresses(int page, int itemsPerPage);
     }
 }

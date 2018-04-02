@@ -45,5 +45,9 @@ namespace URLShortener.Repository
             URLList[indexToBeUpdated] = url;
         }
 
-}
+        public IEnumerable<URL> GetAdresses(int page, int itemsPerPage)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

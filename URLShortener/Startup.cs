@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using URLShortener.Repository;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace URLShortener
 {
@@ -26,6 +27,7 @@ namespace URLShortener
             services.AddMvc();
             services.AddTransient<IURLRepository, URLSQLiteRepository>();
             services.AddDbContext<URLDbContext>(options =>options.UseSqlite(Configuration.GetConnectionString("URLDbConnection")));
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "URLShortener", Version = "v1" }));
 
         }
 
@@ -34,6 +36,8 @@ namespace URLShortener
         {
             if (env.IsDevelopment())
             {
+                app.UseSwagger();
+                app.UseSwaggerUI(c=>c.SwaggerEndpoint("/swagger/v1/swagger.json","URLSHortener API"));
                 app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
             }
