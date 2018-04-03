@@ -14,5 +14,7 @@ namespace URLShortener.Models
         [URLValidation]
         public string Address{ get; set; }
         public string ShortAdress { get; set; }
+
+        public virtual ClickData ClickData { get; set; }
     }
 }

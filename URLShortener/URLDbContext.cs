@@ -15,6 +15,7 @@ namespace URLShortener
         }
 
         public DbSet<URL> URLs { get; set; }
+        public DbSet<ClickData> Clicks { get; set; }
 
 
     }

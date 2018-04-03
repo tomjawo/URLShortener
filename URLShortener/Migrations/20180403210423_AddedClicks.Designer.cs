@@ -10,9 +10,10 @@ using URLShortener;
 namespace URLShortener.Migrations
 {
     [DbContext(typeof(URLDbContext))]
-    partial class URLDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180403210423_AddedClicks")]
+    partial class AddedClicks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
