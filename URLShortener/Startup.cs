@@ -26,6 +26,7 @@ namespace URLShortener
         {
             services.AddMvc();
             services.AddTransient<IURLRepository, URLSQLiteRepository>();
+            services.AddTransient<IClickDataRepository, ClickDataSQLiteRepository>();
             services.AddDbContext<URLDbContext>(options =>options.UseSqlite(Configuration.GetConnectionString("URLDbConnection")));
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "URLShortener", Version = "v1" }));
 
